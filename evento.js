@@ -1,12 +1,10 @@
-function saludar(){
-    alert("Hola!")
+function saludar() {
 }
 
-document.addEventListener("DOMContentLoaded", function (){
-    let boton = document.getElementsByTagName("div")
-    boton.addEventListener("click", function(){
-        alert("Hola! Soy el div")
-    }
-    )
-} 
-)
+
+document.addEventListener("DOMContentLoaded", function() {
+    let divBtn = document.getElementById("div");
+    divBtn.addEventListener("click",function() {
+        alert ("Hola! Soy el div!");
+    });
+});

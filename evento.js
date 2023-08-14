@@ -1,10 +1,17 @@
-function saludar() {
+function saludar(event) {
+    event.stopPropagation();
+    alert('Hola!');
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const divBtn = document.getElementById('div');
+    const btn = document.getElementById('btn');
 
-document.addEventListener("DOMContentLoaded", function() {
-    let divBtn = document.getElementById("div");
-    divBtn.addEventListener("click",function() {
-        alert ("Hola! Soy el div!");
+    btn.addEventListener('click', function(event) {
+        saludar(event);
+    });
+
+    divBtn.addEventListener('click', function() {
+        alert('Hola! Soy el div');
     });
 });
